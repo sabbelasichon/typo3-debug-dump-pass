@@ -1,0 +1,29 @@
+{
+    "name": "ssch/typo3-debug-dump-pass",
+    "description": "Add debug dump compiler pass for better static analysis",
+    "keywords": ["dev", "refactoring"],
+    "type": "typo3-cms-extension",
+    "require": {
+        "symfony/dependency-injection": "^5.0 || ^6.0 || ^7.0",
+        "symfony/config": "^5.0 || ^6.0 || ^7.0",
+        "typo3/cms-core": "^10.4 || ^11.5 || ^12.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ssch\\Typo3DebugDumpPass\\": "Classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sebastian Schreiber",
+            "email": "me@schreibersebastian.de"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true
+        }
+    }
+}
