@@ -35,5 +35,8 @@
             "extension-key": "typo3_debug_dump_pass",
             "web-dir": ".Build/Web"
         }
+    },
+    "require-dev": {
+        "symplify/easy-coding-standard": "^12.1"
     }
 }

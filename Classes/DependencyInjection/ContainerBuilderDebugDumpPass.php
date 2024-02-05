@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Ssch\Typo3DebugDumpPass\DependencyInjection;
@@ -14,7 +15,7 @@ final class ContainerBuilderDebugDumpPass implements CompilerPassInterface
     public function process(ContainerBuilder $container)
     {
         $environment = $this->resolveEnvironmentName();
-        $cache = new ConfigCache(Environment::getVarPath() . '/cache/' . strtolower($environment) . '/App_Kernel'.$environment.'DebugContainer.xml', true);
+        $cache = new ConfigCache(Environment::getVarPath() . '/cache/' . strtolower($environment) . '/App_Kernel' . $environment . 'DebugContainer.xml', true);
         if (!$cache->isFresh()) {
             $cache->write((new XmlDumper($container))->dump(), $container->getResources());
         }
@@ -22,15 +23,15 @@ final class ContainerBuilderDebugDumpPass implements CompilerPassInterface
 
     private function resolveEnvironmentName(): string
     {
-        if(Environment::getContext()->isProduction()) {
+        if (Environment::getContext()->isProduction()) {
             return 'Production';
         }
 
-        if(Environment::getContext()->isDevelopment()) {
+        if (Environment::getContext()->isDevelopment()) {
             return 'Development';
         }
 
-        if(Environment::getContext()->isTesting()) {
+        if (Environment::getContext()->isTesting()) {
             return 'Testing';
         }
 
