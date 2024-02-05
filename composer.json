@@ -6,7 +6,7 @@
     "require": {
         "symfony/dependency-injection": "^5.0 || ^6.0 || ^7.0",
         "symfony/config": "^5.0 || ^6.0 || ^7.0",
-        "typo3/cms-core": "^10.4 || ^11.5 || ^12.4"
+        "typo3/cms-core": "^10.4 || ^11.5 || ^12.4 || ^13.0"
     },
     "license": "MIT",
     "autoload": {
