@@ -20,7 +20,7 @@ final class ContainerBuilderDebugDumpPass implements CompilerPassInterface
         }
     }
 
-    private function resolveEnvironmentName()
+    private function resolveEnvironmentName(): string
     {
         if(Environment::getContext()->isProduction()) {
             return 'Production';
